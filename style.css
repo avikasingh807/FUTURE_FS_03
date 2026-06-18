@@ -1,65 +1,151 @@
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url("images/banner.jpg") center/cover no-repeat;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient Background */
+body {
+  background: linear-gradient(135deg, #ffe4ec, #fdf0f5);
+}
+
+/* Navbar */
+.navbar {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.navbar h1 {
+  color: #d63384;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #d63384;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: url('images/bc:\Users\91987\Downloads\banner.jpganner.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
 }
 
 .hero-content {
-  max-width: 600px;
-  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  color: pink;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.hero-content h2 {
-  font-size: 48px;
-  margin-bottom: 15px;
+.hero h2 {
+  font-size: 50px;
 }
 
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 25px;
-  color: #ddd;
-}
-
-/* BUTTONS */
-.buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
-
-.btn-primary {
+.hero button {
+  margin-top: 20px;
   padding: 12px 25px;
-  background: gold;
   border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background: white;
-}
-
-.btn-secondary {
-  padding: 12px 25px;
-  background: transparent;
-  border: 1px solid white;
+  background: #ff69b4;
   color: white;
+  border-radius: 25px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-secondary:hover {
-  background: white;
-  color: black;
+.hero button:hover {
+  background: #d63384;
+  transform: scale(1.1);
 }
 
-/* ANIMATION */
+/* Collection */
+.collection {
+  padding: 60px;
+  text-align: center;
+}
+
+.collection h2 {
+  margin-bottom: 30px;
+  color: #d63384;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 260px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.card-info {
+  padding: 15px;
+}
+
+/* About Glass Effect */
+.about {
+  display: flex;
+  justify-content: center;
+  padding: 60px;
+}
+
+.about-box {
+  background: rgba(120, 126, 34, 0.5);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #d63384;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -71,13 +157,19 @@
   }
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-content h2 {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h2 {
     font-size: 30px;
   }
 
-  .buttons {
+  .cards {
     flex-direction: column;
+    align-items: center;
   }
 }
