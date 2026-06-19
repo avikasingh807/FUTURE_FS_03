@@ -11,7 +11,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: #8e2d86;
+  background: #9c1491;
   color: white;
 }
 
@@ -36,7 +36,7 @@ header nav a:hover {
 }
 
 .overlay {
-  background: rgba(101, 24, 96, 0.6);
+  background: rgba(27, 155, 172, 0.6);
   padding: 50px;
   text-align: center;
   color: white;
